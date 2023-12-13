@@ -1,7 +1,9 @@
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Header } from '@components/Header'
-import { Container, Form, HeaderList, NumbersOfPlayers } from './styles'
+import { Container, Form } from './styles'
 import { Highlight } from '@components/Highlight'
+
+import { HeaderList, NumberOfPlayers } from '@components/Filter/styles'
 
 import { Input } from '@components/Input'
 
@@ -24,6 +26,7 @@ import { Loading } from '@components/Loading'
 type RouteParams = {
   group: string
 }
+
 export function Players() {
   const [newPlayerName, setNewPlayerName] = useState('')
   const [team, setTeam] = useState('Time A')
@@ -38,6 +41,8 @@ export function Players() {
   async function groupRemove() {
     try {
       await groupRemoveByName(group)
+
+      console.log('remove ->', group)
 
       navigation.navigate('groups')
     } catch (error) {
@@ -113,7 +118,7 @@ export function Players() {
   async function handlePlayerRemove(playerName: string) {
     try {
       await playerRemoveByGroup(playerName, group)
-      fetchPlayersByTeam()
+      await fetchPlayersByTeam()
     } catch (error) {
       console.log(error)
       Alert.alert('Remover pessoa', 'Não foi possível remover essa pessoa.')
@@ -154,7 +159,7 @@ export function Players() {
           )}
           horizontal
         />
-        <NumbersOfPlayers>{players.length}</NumbersOfPlayers>
+        <NumberOfPlayers>{players.length}</NumberOfPlayers>
       </HeaderList>
 
       {!isLoading ? (
@@ -183,7 +188,7 @@ export function Players() {
       <Button
         title="Remover turma"
         type="SECONDARY"
-        onPress={handleGroupRemove}
+        onPress={() => handleGroupRemove()}
       />
     </Container>
   )

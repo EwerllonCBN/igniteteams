@@ -31,9 +31,9 @@ export async function playerAddByGroup(
     //Esse é o storage que vamos passar para ser armazenado no asyncstorage
     const storage = JSON.stringify([...storedPlayers, newPlayer])
     /**
-     @ignite-teams: players-rocket
-     @ignite-teams: players-circuito
-     @ignite-teams: players-machineLearning
+     @ignite-teams: players-rocket : []
+     @ignite-teams: players-circuito : []
+     @ignite-teams: players-machineLearning : []
      */
     await AsyncStorage.setItem(`${PLAYER_COLLECTION}-${group}`, storage)
   } catch (error) {

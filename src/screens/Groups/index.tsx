@@ -6,11 +6,17 @@ import { useCallback, useEffect, useState } from 'react'
 import { FlatList } from 'react-native'
 import { ListEmpty } from '@components/ListEmpty'
 import { Button } from '@components/Button'
-import { useNavigation, useFocusEffect } from '@react-navigation/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import {
+  useNavigation,
+  useFocusEffect,
+  useRoute
+} from '@react-navigation/native'
+
 import { groupsGetAll } from '@storage/group/groupsGetAll'
-import { PlayerStorageDTO } from '@storage/player/PlayerStorageDTO'
 import { Loading } from '@components/Loading'
+import { PlayerStorageDTO } from '@storage/player/PlayerStorageDTO'
+import { groupRemoveByName } from '@storage/group/groupRemoveByName'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export function Groups() {
   const [isLoading, setIsLoading] = useState(true)
@@ -28,15 +34,28 @@ export function Groups() {
       const data = await groupsGetAll()
 
       setGroups(data)
-      setIsLoading(false)
     } catch (error) {
       console.log(error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
   function handleOpenGroup(group: string) {
     navigation.navigate('players', { group })
   }
+
+  const clearAsyncStorage = async () => {
+    try {
+      await AsyncStorage.clear()
+      console.log('Dados do Async Storage foram removidos com sucesso.')
+    } catch (error) {
+      console.error('Erro ao limpar os dados do Async Storage:', error)
+    }
+  }
+
+  // Chamando a função para limpar os dados
+
   useFocusEffect(
     useCallback(() => {
       //quando vai executar? sempre depois da renderização do componente
@@ -57,10 +76,7 @@ export function Groups() {
             data={groups}
             keyExtractor={item => item}
             renderItem={({ item }) => (
-              <GroupCard
-                onPress={() => handleOpenGroup(item.team)}
-                title={item.name}
-              />
+              <GroupCard onPress={() => handleOpenGroup(item)} title={item} />
             )}
             contentContainerStyle={
               groups.length === 0 && { flex: 1, width: '100%' }

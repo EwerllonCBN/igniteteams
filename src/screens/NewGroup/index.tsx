@@ -21,7 +21,7 @@ export function NewGroup() {
   async function handleNew() {
     try {
       if (group.trim().length === 0) {
-        return Alert.alert('Novo Grupo', 'Informe o nome da turma')
+        return Alert.alert('Nova Turma', 'Informe o nome da turma')
       }
       await groupCreate(group)
       navigation.navigate('players', { group }) //Quando tempos a rota igual ao parametro do conteudo, basta apenas 1 nome...

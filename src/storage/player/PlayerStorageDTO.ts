@@ -1,4 +1,4 @@
-export type PlayerStorageDTO =  {
+export type PlayerStorageDTO = {
   name: string
   team: string
-}//DTO = Data Transformed Object
+} //DTO = Data Transformed Object
