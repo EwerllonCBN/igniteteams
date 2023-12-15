@@ -4,12 +4,7 @@ import { Container, Content, Icon, SafeAreaContextContainer } from './styles'
 import { Highlight } from '@components/Highlight'
 import { Button } from '@components/Button'
 import { Input } from '@components/Input'
-import {
-  Alert,
-  KeyboardAvoidingView,
-  KeyboardAvoidingViewProps,
-  Platform
-} from 'react-native'
+import { Alert, Platform } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { groupCreate } from '@storage/group/groupCreate'
 import { AppError } from '@utils/AppError'
