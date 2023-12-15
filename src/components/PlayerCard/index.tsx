@@ -1,5 +1,5 @@
 import { ButtonIcon } from '@components/ButtonIcon'
-import { Container, Icon, Name } from './styles'
+import { Container, Icon, Name, ContentLeft, ContentRight } from './styles'
 
 type Props = {
   name: string
@@ -8,11 +8,14 @@ type Props = {
 export function PlayerCard({ name, onRemove }: Props) {
   return (
     <Container>
-      <Icon name="person" />
+      <ContentLeft>
+        <Icon name="person" />
 
-      <Name>{name}</Name>
-
-      <ButtonIcon icon="close" type="SECONDARY" onPress={onRemove} />
+        <Name>{name}</Name>
+      </ContentLeft>
+      <ContentRight>
+        <ButtonIcon icon="close" type="SECONDARY" onPress={onRemove} />
+      </ContentRight>
     </Container>
   )
 }

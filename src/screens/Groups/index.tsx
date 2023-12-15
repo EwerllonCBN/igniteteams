@@ -59,8 +59,12 @@ export function Groups() {
           <FlatList
             data={groups}
             keyExtractor={item => item}
-            renderItem={({ item }) => (
-              <GroupCard onPress={() => handleOpenGroup(item)} title={item} />
+            renderItem={({ item, index }) => (
+              <GroupCard
+                key={index}
+                onPress={() => handleOpenGroup(item)}
+                title={item}
+              />
             )}
             contentContainerStyle={
               groups.length === 0 && { flex: 1, width: '100%' }

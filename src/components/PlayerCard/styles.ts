@@ -10,13 +10,23 @@ export const Container = styled.View`
 
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 
   margin-bottom: 16px;
 `
 
-export const Name = styled.Text`
-  flex: 1;
+export const ContentLeft = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+`
 
+export const ContentRight = styled.View`
+  width: 20%;
+`
+
+export const Name = styled.Text`
   ${({ theme }) => css`
     font-size: ${theme.FONT_SIZE.MD}px;
     font-family: ${theme.FONT_FAMILY.REGULAR};
