@@ -31,7 +31,7 @@ export function Players() {
   const [newPlayerName, setNewPlayerName] = useState('')
   const [team, setTeam] = useState('Time A')
   const [players, setPlayers] = useState<PlayerStorageDTO[]>([]) //Do tipo de lista da coleção PlayerStorageDTO
-
+  const [id, setId] = useState<string>('')
   const route = useRoute()
   const { group } = route.params as RouteParams
   const navigation = useNavigation()
@@ -76,6 +76,7 @@ export function Players() {
     //Variavel de objeto para adicionar novo jogador
     const newPlayer = {
       name: newPlayerName,
+      id,
       team
     }
 
@@ -149,10 +150,20 @@ export function Players() {
       <HeaderList>
         <FlatList
           data={['Time A', 'Time B']}
-          keyExtractor={item => item}
-          renderItem={({ item }) => (
+          keyExtractor={item => {
+            switch (item) {
+              case 'Time A':
+                return 'keyTimeA'
+              case 'Time B':
+                return 'keyTimeB'
+              default:
+                return ''
+            }
+          }}
+          renderItem={({ item, index }) => (
             <Filter
               title={item}
+              key={index}
               isActive={item === team}
               onPress={() => setTeam(item)}
             />
@@ -167,7 +178,7 @@ export function Players() {
       ) : (
         <FlatList
           data={players}
-          keyExtractor={item => item.team}
+          keyExtractor={item => item.name}
           renderItem={({ item }) => (
             <PlayerCard
               onRemove={() => handlePlayerRemove(item.name)}
