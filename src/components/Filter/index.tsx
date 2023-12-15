@@ -1,6 +1,6 @@
 import { TouchableOpacityProps } from 'react-native'
 import { Container, Title, FilterStyleProps } from './styles'
-import { MaterialIcons } from '@expo/vector-icons'
+
 type Props = TouchableOpacityProps &
   FilterStyleProps & {
     title: string

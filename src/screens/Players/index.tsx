@@ -16,7 +16,6 @@ import { ListEmpty } from '@components/ListEmpty'
 import { Button } from '@components/Button'
 import { AppError } from '@utils/AppError'
 import { playerAddByGroup } from '@storage/player/playerAddByGroup'
-import { playersGetByGroup } from '@storage/player/playersGetByGroup'
 import { playersGetByGroupAndTeam } from '@storage/player/playersGetByGroupAndTeam'
 import { PlayerStorageDTO } from '@storage/player/PlayerStorageDTO'
 import { playerRemoveByGroup } from '@storage/player/playerRemoveByGroup'
@@ -43,8 +42,6 @@ export function Players() {
   async function groupRemove() {
     try {
       await groupRemoveByName(group)
-
-      console.log('remove ->', group)
 
       navigation.navigate('groups')
     } catch (error) {
