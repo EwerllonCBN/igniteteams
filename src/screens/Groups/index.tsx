@@ -63,7 +63,7 @@ export function Groups() {
               <GroupCard
                 key={index}
                 onPress={() => handleOpenGroup(item)}
-                title={item}
+                title={item.length > 20 ? `${item.slice(0, 22)}...` : item}
               />
             )}
             contentContainerStyle={
