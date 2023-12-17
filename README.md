@@ -36,7 +36,7 @@ No geral, o **Ignite Teams** é um aplicativo útil para gerenciar turmas e time
 
 **Cadastro de turmas**
 
-<img src=".github/screen_turmas.png" />
+<img src="https://github.com/EwerllonCBN/igniteteams/assets/73199791/c63306d5-f1b6-4dbf-b72f-f056440713b1" />
 
 **Gerenciamento dos times**
 
