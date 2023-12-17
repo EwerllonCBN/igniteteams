@@ -1,4 +1,4 @@
-<img src=".github/ignite-teams-capa.png" />
+<img src="https://github.com/EwerllonCBN/igniteteams/assets/73199791/78fbfc52-5e70-49b0-b942-31d91ffc8e7b" />
 
 <h1 align="center">
    Ignite Teams
