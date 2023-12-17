@@ -84,7 +84,7 @@ Abra o aplicativo do Expo no smartphone, aponte a câmera para o QRCode que apar
 
 **Importante**: _O dispositivo móvel e o computador precisam estar na mesma rede_
 
-<img src=".github/npx-expo-start.png"/>
+<img src="https://github.com/EwerllonCBN/igniteteams/assets/73199791/8f3e007f-9502-4523-9f00-fcc226d7bf9a"/>
 
 ## 🚀 Tecnologias
 
