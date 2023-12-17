@@ -24,21 +24,21 @@
 
 ## 💻 Projeto
 
-O **Ignite Teams** é um aplicativo simples e fácil de usar projetado para ajudar a gerenciar turmas e times. Com o **Ignite Teams**, é fácil criar novas turmas e adicionar ou remover pessoas de times em turmas existentes. O aplicativo é perfeito para professores, treinadores, gerentes e outros profissionais que trabalham com equipes.
+O **Ignite Teams** é uma aplicação simples e intuitiva, projetada para facilitar a gestão de turmas e equipes. Ideal para professores, treinadores, gerentes e outros profissionais que lidam com grupos, o aplicativo oferece uma experiência fácil e eficiente.
 
-A interface do usuário do **Ignite Teams** é intuitiva e fácil de navegar. A tela inicial apresenta uma lista de turmas existentes e os times dentro de cada turma. O usuário pode facilmente criar uma nova turma ou time clicando no botão correspondente.
+A interface do **Ignite Teams** é intuitiva, proporcionando uma navegação amigável. Na tela inicial, você encontra uma lista das turmas existentes, destacando os times associados a cada uma delas. A criação de uma nova turma ou time é simplificada por meio de botões intuitivos.
 
-Uma vez que um time é criado, o usuário pode adicionar ou remover pessoas daquele time a qualquer momento. As mudanças são refletidas imediatamente em todas as outras partes do aplicativo.
+Uma vez que um time é estabelecido, o usuário tem total controle para adicionar ou remover membros conforme necessário. Todas as alterações são imediatamente refletidas em todas as áreas do aplicativo.
 
-No geral, o **Ignite Teams** é um aplicativo útil para gerenciar turmas e times. Com sua interface fácil de usar e suas funcionalidades simples, o aplicativo é uma solução eficaz para qualquer pessoa que precise gerenciar equipes.
+Em resumo, o **Ignite Teams** se destaca como uma ferramenta útil para a administração eficaz de turmas e equipes. Com sua interface amigável e funcionalidades descomplicadas, o aplicativo é uma solução eficiente para qualquer pessoa encarregada de gerenciar equipes.
 
 ### 📱 Telas do aplicativo
 
-**Cadastro de turmas**
+### Cadastro de turmas
 
 <img src="https://github.com/EwerllonCBN/igniteteams/assets/73199791/c63306d5-f1b6-4dbf-b72f-f056440713b1" />
 
-**Gerenciamento dos times**
+### Gerenciamento dos times
 
 #### Grupo A
 
@@ -80,7 +80,7 @@ npx expo start
 
 **Abra o projeto no dispositivo**
 
-Abra o aplicativo do Expo no smartphone, aponte a câmera para o QRCode que apareceu no terminal após executar o comando `npx expo start`.
+Abra o aplicativo do Expo no smartphone, aponte a câmera para o QRCode que aparece no terminal após executar o comando `npx expo start`.
 
 **Importante**: _O dispositivo móvel e o computador precisam estar na mesma rede_
 
@@ -103,7 +103,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Você pode visualizar o layout do projeto através [deste link](https://www.figma.com/community/file/1151864427495057381).
 
 <a href="https://www.figma.com/community/file/1151864427495057381">
-  <img src=".github/ignite-teams-figma.png" />
+  <img src="https://github.com/EwerllonCBN/igniteteams/assets/73199791/9f31277e-6f96-4259-b828-4976204e67ac" />
 </a>
 
 ## 📝 Licença
