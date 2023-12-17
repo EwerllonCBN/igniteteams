@@ -59,7 +59,7 @@ No geral, o **Ignite Teams** é um aplicativo útil para gerenciar turmas e time
 **Clone este repositório**
 
 ```bash
-git clone git@github.com:vitorsemidio-dev/igniteteams.git
+git clone git@github.com:EwerllonCBN/igniteteams.git
 ```
 
 **Acesse a pasta**
