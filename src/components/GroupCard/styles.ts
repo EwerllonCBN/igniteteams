@@ -4,6 +4,7 @@ import { User, UsersThree } from 'phosphor-react-native'
 
 export const Container = styled(TouchableOpacity)`
   width: 90%;
+  max-width: 90%;
   background-color: ${({ theme }) => theme.COLORS.GRAY_500};
   border-radius: 6px;
 
